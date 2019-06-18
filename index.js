@@ -11,3 +11,17 @@ function nowServing(current) {
   }
 }
 
+function currentLine(current) {
+  if (current.length === 0) {
+    return "The line is currently empty."
+  }
+  let str = "The line is currently: "
+  for (let i = 0; i < current.length; i++) {
+    str += `${i + 1}. ${current[i]}`;
+    if (i != current.length - 1) {
+      str += ", ";
+    }
+  }
+  
+  return str;
+}
